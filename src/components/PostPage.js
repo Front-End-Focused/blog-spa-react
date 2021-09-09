@@ -38,7 +38,7 @@ function PostPage() {
     function CommentsSection() {
         let { comments } = data;
         if (!comments.length) return;
-        const dataCom = comments.map((comment) => <CommentItem name={comment.name} body={comment.body} email={comment.email} id={comment.id} />)
+        const dataCom = comments.map((comment) => <CommentItem name={comment.name} body={comment.body} email={comment.email} id={comment.id} key={`comment-${comment.id}`} />)
         return (
             <section className="mt-5 mb-5">
                 <h4 className="mb-5">Comments ({comments.length})</h4>
