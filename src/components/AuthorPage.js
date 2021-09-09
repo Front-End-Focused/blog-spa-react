@@ -19,12 +19,13 @@ export default function AuthorPage (){
     }, [id]);
     
     function renderPostsSection() {
-        return data.posts.map(post => <PostItem key = {post.id} title = {post.title} body = {post.body} id = {post.id} />)
+        return data.posts.map(({id, title, body }) => <PostItem key = {id} title = {title} body = {body} id = {id} />)
     }
 
 
     return (
         data ?
+
             <main>
                 <section className="d-flex mt-5 mb-5">
                     <div className="flex-shrink-0">

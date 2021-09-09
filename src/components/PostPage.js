@@ -18,7 +18,7 @@ function PostPage() {
     }, [id]);
 
     function renderCommentList() {
-        return data.comments.map(comment => <Comment key={ comment.id} name={comment.name} body={comment.body} email={comment.email} id={comment.id}/>)
+        return data.comments.map(({id, name, body, email}) => <Comment key={id} name={name} body={body} email={email} id={id}/>)
     }
     
     return data ? ( <main>
