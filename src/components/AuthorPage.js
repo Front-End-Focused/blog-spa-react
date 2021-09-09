@@ -27,7 +27,7 @@ function AuthorPage() {
     function PostsSection() {
         let { posts } = data;
         if (!posts.length) return;
-        const dataPost = posts.map((article) => <PostItem title={article.title} body={article.body} id={article.id} />)
+        const dataPost = posts.map((article) => <PostItem title={article.title} body={article.body} id={article.id} key={`post-${article.id}`} />)
         return (
             <section className="mt-5 mb-5">
                 <h4 className="mb-5">Posts ({posts.length})</h4>
