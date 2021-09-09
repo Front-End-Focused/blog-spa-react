@@ -15,7 +15,7 @@ function PostsList() {
 
     function renderList() {
         return data.map((article) =>
-            <PostItem title={article.title} body={article.body} id={article.id} />)
+            <PostItem title={article.title} body={article.body} id={article.id} key={`post-${article.id}`} />)
     }
     return data.length ? renderList() : "Please wait...";
 }
